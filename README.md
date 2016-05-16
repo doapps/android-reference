@@ -73,7 +73,16 @@ values
 values-v21
 ```
 
-## Definir formato de Colors.xml
+### Comentar una clases
+```java
+/**Initializing GUI **/
+private void init(){
+    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+    TextView text = (TextView) findViewById(R.id.text);
+}
+```
+
+### Definir formato de Colors.xml
 
 ```xml
 <resources>
