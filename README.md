@@ -75,8 +75,10 @@ values-v21
 
 ### Comentar una clases
 ```java
-/**Initializing GUI **/
-private void init(){
+/**
+  * Initializing GUI
+  **/
+private void init() {
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
     TextView text = (TextView) findViewById(R.id.text);
 }
@@ -86,19 +88,21 @@ private void init(){
 
 ```xml
 <resources>
-
-    <!-- grayscale -->
-    <color name="white"     >#FFFFFF</color>
-    <color name="gray_light">#DBDBDB</color>
-    <color name="gray"      >#939393</color>
-    <color name="gray_dark" >#5F5F5F</color>
-    <color name="black"     >#323232</color>
+    <color name="colorPrimary">@color/black</color>
+    <color name="colorPrimaryDark">@color/green</color>
+    <color name="colorAccent">@color/white</color>
 
     <!-- basic colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
     <color name="green">#27D34D</color>
     <color name="blue">#2A91BD</color>
     <color name="orange">#FF9D2F</color>
     <color name="red">#FF432F</color>
 
+    <!-- opacity white -->
+    <color name="white_100">#00FFFFFF</color>
+    <color name="white_75">#BFFFFFFF</color>
+    <color name="white_50">#80FFFFFF</color>
 </resources>
 ```

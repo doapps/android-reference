@@ -23,8 +23,15 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String temp = "default";
+            }
+        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -43,15 +50,21 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        init();
     }
 
-    /**Initializing GUI **/
-    private void init(){
+    /**
+     * Initializing GUI
+     **/
+    private void init() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         TextView text = (TextView) findViewById(R.id.text);
     }
 
-
+    /**
+     * Implements Methods
+     **/
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -62,6 +75,10 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+
+    /**
+     * Menu Methods
+     **/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
