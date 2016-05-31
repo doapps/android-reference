@@ -57,6 +57,16 @@ RegisterFragment
 DetailFragment
 ```
 
+### Comentar una clases
+```java
+/**
+  * Initializing GUI
+  **/
+private void init() {
+    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+    TextView text = (TextView) findViewById(R.id.text);
+}
+```
 
 ### Estructura RES
 
@@ -71,17 +81,6 @@ layout
 manu
 values
 values-v21
-```
-
-### Comentar una clases
-```java
-/**
-  * Initializing GUI
-  **/
-private void init() {
-    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-    TextView text = (TextView) findViewById(R.id.text);
-}
 ```
 
 ### Definir formato de Colors.xml
@@ -106,3 +105,28 @@ private void init() {
     <color name="white_50">#80FFFFFF</color>
 </resources>
 ```
+
+#### Uso de las carpetas “mipmap“ y “drawable”
+Android Studio nos provee por defecto de ambas carpetas para almacenar los recursos gráficos del proyecto.
+
+La carpeta `mipmap`, sirve exclusivamente para almacenar el icon launcher de la aplicación, es decir que solo
+almacenará los archivos `ic_launcher.png` y su distribución será así:
+```
+├─ mipmap-hdpi
+│  ├─ ic_launcher.png
+│  |
+├─ mipmap-mdpi
+│  ├─ ic_launcher.png
+│  |
+├─ mipmap-xhdpi
+│  ├─ ic_launcher.png
+│  |
+├─ mipmap-xxhdpi
+│  ├─ ic_launcher.png
+│  |
+├─ mipmap-xxxhdpi
+│  ├─ ic_launcher.png
+│  |
+```
+
+La carpeta `drawable`, sirve para almacenar recursos .xml e imágenes en sus distintos formatos.
