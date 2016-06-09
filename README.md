@@ -129,4 +129,44 @@ almacenará los archivos `ic_launcher.png` y su distribución será así:
 │  |
 ```
 
-La carpeta `drawable`, sirve para almacenar recursos .xml e imágenes en sus distintos formatos.
+La carpeta `drawable`, sirve para almacenar recursos .xml tales como los selector, shape y derivados.
+La carpeta `drawable-hdpi`, `drawable-xhdpi`y demás sirven para almcenar los recursos gráficos de la aplicación, como íconos, logos, imágenes de fondo, etc.
+
+#### Utilizar fuentes de texto
+Si bien Androi Studio no nos provee de una carpeta por defecto para almacenar archivos .ttf .otf o derivados, podemos optar por crear nuestra propia
+paquetería para almacenar otros archivos que no sea recursos gráficos.
+
+Crearemos una carpeta llamanda `assets` y dentro crearemos la carpeta `font`, aquí podremos guardar nuestros archivos .ttf o derivados.
+
+```
+─ main
+   ├─ assets
+   │  └─ font
+   ├─ java
+   │  └─ com/domain/project
+   ├─ res
+   └─ AndroidManifest.xml
+```
+
+### Crear tus componentes customizados (widgets)
+
+## TextView customizados
+
+
+### Crea tus utilitarios
+A medida que ganamos experiencia como desarrolladores, generamos código que puede ser reutilizable los más comunes
+son los utilitarios, pequeñas clases con funciones específicas como por ejemplo un utilitario cuyo único objetivo es
+retornar la cantidad de días que han transcurrido desde el origen del mundo hasta la fecha de hoy.
+
+```
+─ main
+   ├─ assets
+   │  └─ font
+   ├─ java
+   │  └─ com/domain/project
+   │     └─ activity
+   │     └─ fragment
+   │     └─ util
+   ├─ res
+   └─ AndroidManifest.xml
+```
