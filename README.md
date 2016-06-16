@@ -106,6 +106,21 @@ values-v21
 </resources>
 ```
 
+### Definir cadenas estáticas por pantalla en strings.xml
+
+```xml
+<resources>
+    <string name="app_name">Abaco</string>
+    <!-- activity_menu -->
+    <string name="menu_home">Inicio</string>
+    <string name="menu_contact">Contactos</string>
+    <string name="menu_profile">Perfil</string>
+    <!-- fragment_profile -->
+    <string name="label_lastname">Apellido</string>
+    <string name="label_name">Nombre</string>
+</resources>
+```
+
 #### Uso de las carpetas “mipmap“ y “drawable”
 Android Studio nos provee por defecto de ambas carpetas para almacenar los recursos gráficos del proyecto.
 
