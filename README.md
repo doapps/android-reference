@@ -110,7 +110,7 @@ values-v21
 
 ```xml
 <resources>
-    <string name="app_name">Abaco</string>
+    <string name="app_name">DoApps</string>
     <!-- activity_menu -->
     <string name="menu_home">Inicio</string>
     <string name="menu_contact">Contactos</string>
