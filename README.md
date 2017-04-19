@@ -16,7 +16,7 @@ https://github.com/futurice/android-best-practices/tree/master/templates/rx-arch
 
 ## Estructura del proyecto
 
-### Estructura base
+### Estructura base por Android Studio
 ```
 ├─ app
 │  ├─ libs
@@ -34,6 +34,197 @@ https://github.com/futurice/android-best-practices/tree/master/templates/rx-arch
 ├─ build.gradle
 └─ settings.gradle
 ```
+
+
+### Estructura interna - java
+```
+├─ java
+│  ├─ com.domain.project
+│     └─ activity
+│     └─ fragment
+│     └─ application
+│     └─ model
+│     └─ adapter
+│     └─ config
+│     └─ dialog
+│     └─ listener
+│     └─ connection
+│     └─ database
+│     └─ service
+│     └─ session
+│     └─ fcm
+│     └─ util
+│     └─ widget
+
+```
+
+#### Estructura interna - java - activity
+```
+├─ java
+│  ├─ com.domain.project
+│     └─ activity
+│         └─ MainActivity.java
+│         └─ SplashActivity.java
+
+** En caso amerite se crearán subcarpetas a discreción del desarrollador para ordenar las clases.
+```
+
+#### Estructura interna - java - fragment
+```
+├─ java
+│  ├─ com.domain.project
+│     └─ fragment
+│         └─ MainFragment.java
+
+** En caso amerite se crearán subcarpetas a discreción del desarrollador para ordenar las clases.
+```
+
+#### Estructura interna - java - application
+```
+├─ java
+│  ├─ com.domain.project
+│     └─ applicaction
+│         └─ MainApplication.java
+
+** En caso amerite se crearán subcarpetas a discreción del desarrollador para ordenar las clases.
+```
+
+#### Estructura interna - java - application
+```
+├─ java
+│  ├─ com.domain.project
+│     └─ applicaction
+│         └─ MainApplication.java
+
+** En caso amerite se crearán subcarpetas a discreción del desarrollador para ordenar las clases.
+```
+
+#### Estructura interna - java - model
+```
+├─ java
+│  ├─ com.domain.project
+│     └─ model
+│         └─ Product.java
+
+```
+
+#### Estructura interna - java - adapter
+```
+├─ java
+│  ├─ com.domain.project
+│     └─ adapter
+│         └─ ProductAdapter.java
+
+** Importante considerar que el nombre del adapter tiene que ser equivalente al nombre del modelo
+```
+
+#### Estructura interna - java - config
+```
+├─ java
+│  ├─ com.domain.project
+│     └─ config
+│         └─ Setting.java
+│         └─ Message.java
+
+** Almacenar variables staticas y finales que puedan ser reutilizables como mensajes dinámicos, log errores, etc.
+```
+
+#### Estructura interna - java - dialog
+```
+├─ java
+│  ├─ com.domain.project
+│     └─ dialog
+│         └─ ProgressDialog.java
+
+** Almacenar las clases controladoras de diálogos customizados.
+```
+
+#### Estructura interna - java - listener
+```
+├─ java
+│  ├─ com.domain.project
+│     └─ listener
+│         └─ NotificationListener.java
+
+** Almacenar las clases de tipo interface
+```
+
+#### Estructura interna - java - connection
+```
+├─ java
+│  ├─ com.domain.project
+│     └─ connection
+│         └─ ApiConnectService.java
+│         └─ RestApi.java
+│         └─ RestApiImpl.java
+
+** Almacenar las clases que involucran a Retrofit - PENDIENTE
+```
+
+#### Estructura interna - java - database
+```
+├─ java
+│  ├─ com.domain.project
+│     └─ database
+│         └─ SQLiteManager.java
+│         └─ SQLiteOpenHelper.java
+
+** Almacenar las clases que involucran a SQLite - PENDIENTE
+```
+
+#### Estructura interna - java - service
+```
+├─ java
+│  ├─ com.domain.project
+│     └─ service
+│         └─ SyncService.java
+│         └─ TrackingService.java
+
+** Almacenar las clases que se ejecutan en segundo plano
+```
+#### Estructura interna - java - session
+```
+├─ java
+│  ├─ com.domain.project
+│     └─ session
+│         └─ Preference.java
+
+** Almacenar las clases de tipo preference - PENDIENTE
+```
+
+#### Estructura interna - java - fcm
+```
+├─ java
+│  ├─ com.domain.project
+│     └─ fcm
+│         └─ InstanceService.java
+│         └─ MessagingService.java
+
+** Almacenar las clases exclusivas de fcm
+```
+
+#### Estructura interna - java - util
+```
+├─ java
+│  ├─ com.domain.project
+│     └─ util
+│         └─ InternetUtil.java
+│         └─ ValidatorUtil.java
+
+** Almacenar las clases de tipo utilería
+```
+
+#### Estructura interna - java - widget
+```
+├─ java
+│  ├─ com.domain.project
+│     └─ widget
+│         └─ BoldButton.java
+│         └─ RegularText.java
+
+** Almacena componentes visuales customizados
+```
+
 
 ### Estructura JAVA
 
