@@ -36,41 +36,37 @@ https://github.com/futurice/android-best-practices/tree/master/templates/rx-arch
 ```
 
 
-### Estructura interna - java
-
-Estructura del paquete java
----------------------------
+### Estructura /java
 
 > **Nota:**
 >
 > - El paquete **java** es un contenedor de clases para diferentes fines dentro de la aplicación.
-> - El estandar para crear clases lo pueden revisar [aquí](#Utilitarios).
+> - El IDE Android Studio provee por defecto las carpetas bases.
+> - Si un paquete contiene sub carpetas solo valdrá la pena crear las carpetas si estas contienen clases.
+> - Las carpetas debe estar en minuscula y en singular.
 
 ```
 ├─ java
 │  ├─ com.domain.project
-│     └─ activity
-│     └─ fragment
-│     └─ application
-│     └─ model
-│     └─ adapter
-│     └─ config
-│     └─ dialog
-│     └─ listener
-│     └─ connection
-│     └─ database
-│     └─ service
-│     └─ session
-│     └─ fcm
-│     └─ util
+│     ├─ activity
+│     ├─ fragment
+│     ├─ application
+│     ├─ model
+│     ├─ adapter
+│     ├─ config
+│     ├─ dialog
+│     ├─ listener
+│     ├─ networking
+│     ├─ database
+│     ├─ service
+│     ├─ session
+│     ├─ util
 │     └─ widget
 
 ```
 
 
-
-
-#### Estructura interna - java - activity
+##### Estructura /java/activity
 ```
 ├─ java
 │  ├─ com.domain.project
@@ -81,7 +77,7 @@ Estructura del paquete java
 ** En caso amerite se crearán subcarpetas a discreción del desarrollador para ordenar las clases.
 ```
 
-#### Estructura interna - java - fragment
+##### Estructura /java/fragment
 ```
 ├─ java
 │  ├─ com.domain.project
@@ -91,7 +87,7 @@ Estructura del paquete java
 ** En caso amerite se crearán subcarpetas a discreción del desarrollador para ordenar las clases.
 ```
 
-#### Estructura interna - java - application
+#### Estructura /java/application
 ```
 ├─ java
 │  ├─ com.domain.project
@@ -101,17 +97,7 @@ Estructura del paquete java
 ** En caso amerite se crearán subcarpetas a discreción del desarrollador para ordenar las clases.
 ```
 
-#### Estructura interna - java - application
-```
-├─ java
-│  ├─ com.domain.project
-│     └─ applicaction
-│         └─ MainApplication.java
-
-** En caso amerite se crearán subcarpetas a discreción del desarrollador para ordenar las clases.
-```
-
-#### Estructura interna - java - model
+#### Estructura /java/model
 ```
 ├─ java
 │  ├─ com.domain.project
@@ -120,7 +106,7 @@ Estructura del paquete java
 
 ```
 
-#### Estructura interna - java - adapter
+#### Estructura /java/adapter
 ```
 ├─ java
 │  ├─ com.domain.project
@@ -130,7 +116,7 @@ Estructura del paquete java
 ** Importante considerar que el nombre del adapter tiene que ser equivalente al nombre del modelo
 ```
 
-#### Estructura interna - java - config
+#### Estructura /java/config
 ```
 ├─ java
 │  ├─ com.domain.project
@@ -141,7 +127,7 @@ Estructura del paquete java
 ** Almacenar variables staticas y finales que puedan ser reutilizables como mensajes dinámicos, log errores, etc.
 ```
 
-#### Estructura interna - java - dialog
+#### Estructura /java/dialog
 ```
 ├─ java
 │  ├─ com.domain.project
@@ -151,7 +137,7 @@ Estructura del paquete java
 ** Almacenar las clases controladoras de diálogos customizados.
 ```
 
-#### Estructura interna - java - listener
+#### Estructura /java/listener
 ```
 ├─ java
 │  ├─ com.domain.project
@@ -161,19 +147,28 @@ Estructura del paquete java
 ** Almacenar las clases de tipo interface
 ```
 
-#### Estructura interna - java - connection
+#### Estructura /java/networking
 ```
 ├─ java
 │  ├─ com.domain.project
-│     └─ connection
-│         └─ ApiConnectService.java
-│         └─ RestApi.java
-│         └─ RestApiImpl.java
+│     └─ networking
+│         └─ rest
+│             └─ ApiConnectService.java
+│             └─ RestApi.java
+│             └─ RestApiImpl.java
+│         └─ fcm
+│             └─ InstanceService.java
+│             └─ MessagingService.java
+│         └─ service
+│             └─ TrackerService.java
+│             └─ SyncronizeService.java
 
-** Almacenar las clases que involucran a Retrofit - PENDIENTE
+** rest Almacenar las clases que involucran a Retrofit
+** fcm las clases firebase
+** service otras clases en segundo plano.
 ```
 
-#### Estructura interna - java - database
+#### Estructura /java/database
 ```
 ├─ java
 │  ├─ com.domain.project
@@ -184,7 +179,7 @@ Estructura del paquete java
 ** Almacenar las clases que involucran a SQLite - PENDIENTE
 ```
 
-#### Estructura interna - java - service
+#### Estructura /java/service
 ```
 ├─ java
 │  ├─ com.domain.project
@@ -194,7 +189,7 @@ Estructura del paquete java
 
 ** Almacenar las clases que se ejecutan en segundo plano
 ```
-#### Estructura interna - java - session
+#### Estructura /java/session
 ```
 ├─ java
 │  ├─ com.domain.project
@@ -204,18 +199,8 @@ Estructura del paquete java
 ** Almacenar las clases de tipo preference - PENDIENTE
 ```
 
-#### Estructura interna - java - fcm
-```
-├─ java
-│  ├─ com.domain.project
-│     └─ fcm
-│         └─ InstanceService.java
-│         └─ MessagingService.java
 
-** Almacenar las clases exclusivas de fcm
-```
-
-#### Estructura interna - java - util
+#### Estructura /java/util
 ```
 ├─ java
 │  ├─ com.domain.project
@@ -226,7 +211,7 @@ Estructura del paquete java
 ** Almacenar las clases de tipo utilería
 ```
 
-#### Estructura interna - java - widget
+#### Estructura /java/widget
 ```
 ├─ java
 │  ├─ com.domain.project
