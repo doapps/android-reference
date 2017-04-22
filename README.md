@@ -37,6 +37,15 @@ https://github.com/futurice/android-best-practices/tree/master/templates/rx-arch
 
 
 ### Estructura interna - java
+
+Estructura del paquete java
+---------------------------
+
+> **Nota:**
+>
+> - El paquete **java** es un contenedor de clases para diferentes fines dentro de la aplicación.
+> - El estandar para crear clases lo pueden revisar [aquí](#Utilitarios).
+
 ```
 ├─ java
 │  ├─ com.domain.project
@@ -59,11 +68,7 @@ https://github.com/futurice/android-best-practices/tree/master/templates/rx-arch
 ```
 
 
-> **Note:**
 
-> - StackEdit is accessible offline after the application has been loaded for the first time.
-> - Your local documents are not shared between different browsers or computers.
-> - Clearing your browser's data may **delete all your local documents!** Make sure your documents are synchronized with **Google Drive** or **Dropbox** (check out the [<i class="icon-refresh"></i> Synchronization](#synchronization) section).
 
 #### Estructura interna - java - activity
 ```
@@ -365,6 +370,9 @@ Crearemos una carpeta llamanda `assets` y dentro crearemos la carpeta `font`, aq
 
 ## TextView customizados
 
+
+Utilitarios
+-----------
 
 ### Crea tus utilitarios
 A medida que ganamos experiencia como desarrolladores, generamos código que puede ser reutilizable los más comunes
