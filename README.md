@@ -265,75 +265,55 @@ public class ExampleActivity extends AppCompatActivity {
 
     }
 
+
+    /** View Events **/
     @OnClick(R.id.button_opcion1)
-            public void getOption1() {
-                isEstado(1);
-                include_opcion1.setVisibility(View.VISIBLE);
-                include_opcion2.setVisibility(View.INVISIBLE);
-            }
+    public void getOption1() {
+        isEstado(1);  
+        include_opcion1.setVisibility(View.VISIBLE);
+        include_opcion2.setVisibility(View.INVISIBLE);
+    }
 
-            @OnClick(R.id.button_opcion2)
-            public void getOption2() {
-                isEstado(2);
-                include_opcion1.setVisibility(View.INVISIBLE);
-                include_opcion2.setVisibility(View.VISIBLE);
-            }
+    @OnClick(R.id.button_opcion2)
+    public void getOption2() {
+        isEstado(2);
+        include_opcion1.setVisibility(View.INVISIBLE);
+        include_opcion2.setVisibility(View.VISIBLE);
+    }
 
-            /**
-             * Metodo cambia los colores de los botones
-             *
-             * @param status :
-             *               <p>
-             *               1 -> Color de selecion en el botton 1
-             *               2 -> Color de selecion en el botton 2
-             */
-
-            public void isEstado(int status) {
-                if (status == 1) {
-                    button_opcion1.setBackground(getResources().getDrawable(R.drawable.borde_in_1));
-                    button_opcion1.setTextColor(getResources().getColor(R.color.smv_plomo2));
-
-                    button_opcion2.setBackground(getResources().getDrawable(R.drawable.borde_of_1));
-                    button_opcion2.setTextColor(getResources().getColor(R.color.smv_blanco));
-                } else {
-                    button_opcion1.setBackground(getResources().getDrawable(R.drawable.borde_of_2));
-                    button_opcion1.setTextColor(getResources().getColor(R.color.smv_blanco));
-
-                    button_opcion2.setBackground(getResources().getDrawable(R.drawable.borde_in_2));
-                    button_opcion2.setTextColor(getResources().getColor(R.color.smv_plomo2));
-                }
-            }
-
-        @Override
-        public void onBackPressed() {
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            if (drawer.isDrawerOpen(GravityCompat.START)) {
-                drawer.closeDrawer(GravityCompat.START);
-            } else {
-                if (!isDisplayAd) {
-                    displayAds();
-                    isDisplayAd = true;
-                }
-                super.onBackPressed();
-            }
+    /** Logic Events **/
+    public void isEstado(int status) {
+        if (status == 1) {
+            button_opcion1.setBackground(getResources().getDrawable(R.drawable.borde_in_1));
+            button_opcion1.setTextColor(getResources().getColor(R.color.smv_plomo2
+            button_opcion2.setBackground(getResources().getDrawable(R.drawable.borde_of_1));
+            button_opcion2.setTextColor(getResources().getColor(R.color.smv_blanco));
+        } else {
+            button_opcion1.setBackground(getResources().getDrawable(R.drawable.borde_of_2));
+            button_opcion1.setTextColor(getResources().getColor(R.color.smv_blanco
+            button_opcion2.setBackground(getResources().getDrawable(R.drawable.borde_in_2));
+            button_opcion2.setTextColor(getResources().getColor(R.color.smv_plomo2));
         }
+    }
 
-         private ArrayList<SectorsEntity> getList() {
-                        ArrayList<SectorsEntity> lista = new ArrayList<>();
-
-                        lista.add(new SectorsEntity("1", "HOLA 1"));
-                        lista.add(new SectorsEntity("2", "HOLA 2"));
-                        lista.add(new SectorsEntity("3", "HOLA 3"));
-                        lista.add(new SectorsEntity("4", "HOLA 4"));
-                        lista.add(new SectorsEntity("5", "HOLA 5"));
-                        lista.add(new SectorsEntity("6", "HOLA 6"));
-                        lista.add(new SectorsEntity("7", "HOLA 7"));
-                        lista.add(new SectorsEntity("8", "HOLA 8"));
-
-                        return lista;
-                    }
+    /** Lifecycle Events **/
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            if (!isDisplayAd) {
+                displayAds();
+                isDisplayAd = true;
+            }
+            super.onBackPressed();
+        }
+    }
 
 }
+```
+
 ### Comentar una clases
 ```java
 /**
