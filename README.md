@@ -245,10 +245,10 @@ DetailFragment
 ### Estructura de un activity
 ```java
 
-public class DetalleQuotaActivity extends AppCompatActivity {
+public class ExampleActivity extends AppCompatActivity {
 
     @BindView(R.id.image_global)
-    ImageView image_global;
+    ImageView global_image;
 
     Toolbar toll;
 
