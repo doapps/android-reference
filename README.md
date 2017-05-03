@@ -506,4 +506,4 @@ retornar la cantidad de días que han transcurrido desde el origen del mundo has
 
 ### Librerías a utilizar
 
-    Butter Knife <http://github.com/JakeWharton/butterknife>
+    [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
