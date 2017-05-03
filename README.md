@@ -502,3 +502,8 @@ retornar la cantidad de días que han transcurrido desde el origen del mundo has
    ├─ res
    └─ AndroidManifest.xml
 ```
+
+
+### Librerías a utilizar
+
+    Butter Knife -> https://github.com/JakeWharton/butterknife
