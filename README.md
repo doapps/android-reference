@@ -16,7 +16,8 @@ https://github.com/futurice/android-best-practices/tree/master/templates/rx-arch
 
 ## Estructura del proyecto
 
-### Estructura base por Android Studio
+Esta es la estructura base que nos proporciona Android Studio al crear un proyecto para aplicaciones móviles.
+
 ```
 ├─ app
 │  ├─ libs
@@ -152,10 +153,8 @@ https://github.com/futurice/android-best-practices/tree/master/templates/rx-arch
 ├─ java
 │  ├─ com.domain.project
 │     └─ networking
-│         └─ rest
-│             └─ ApiConnectService.java
-│             └─ RestApi.java
-│             └─ RestApiImpl.java
+│         └─ retrofit
+│             └─ MelanieInterface.java
 │         └─ fcm
 │             └─ InstanceService.java
 │             └─ MessagingService.java
@@ -173,10 +172,19 @@ https://github.com/futurice/android-best-practices/tree/master/templates/rx-arch
 ├─ java
 │  ├─ com.domain.project
 │     └─ database
-│         └─ SQLiteManager.java
-│         └─ SQLiteOpenHelper.java
+│         └─ SQLiteConnection.java
+│         └─ TableContent.java
+│         └─ table
+│              └─ EntityTable.java
+│         └─ process
+│              └─ EntityInterface.java
+│              └─ EntityProcessor.java
 
-** Almacenar las clases que involucran a SQLite - PENDIENTE
+
+** ProductTable.java define el nombre de la tabla y las columnas.
+** SQLiteConnection.java hereda de SQLiteOpenHelper y define la creación o actualización de la base de datos.
+** TableContent.java contiene el script de las tablas, que serán llamadas desde la clase SQLiteConnection.java
+PENDIENTE EXPERIMENTAR
 ```
 
 #### Estructura /java/service
