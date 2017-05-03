@@ -59,7 +59,6 @@ Esta es la estructura base que nos proporciona Android Studio al crear un proyec
 │     ├─ listener
 │     ├─ networking
 │     ├─ database
-│     ├─ service
 │     ├─ session
 │     ├─ util
 │     └─ widget
@@ -153,18 +152,18 @@ Esta es la estructura base que nos proporciona Android Studio al crear un proyec
 ├─ java
 │  ├─ com.domain.project
 │     └─ networking
-│         └─ retrofit
-│             └─ MelanieInterface.java
+│         └─ connection
+│             └─ RestApi.java
 │         └─ fcm
 │             └─ InstanceService.java
 │             └─ MessagingService.java
-│         └─ service
+│         └─ background
 │             └─ TrackerService.java
 │             └─ SyncronizeService.java
 
-** rest Almacenar las clases que involucran a Retrofit
+** connection Almacenar las clases que involucran a Retrofit
 ** fcm las clases firebase
-** service otras clases en segundo plano.
+** background otras clases en segundo plano.
 ```
 
 #### Estructura /java/database
@@ -187,16 +186,6 @@ Esta es la estructura base que nos proporciona Android Studio al crear un proyec
 PENDIENTE EXPERIMENTAR
 ```
 
-#### Estructura /java/service
-```
-├─ java
-│  ├─ com.domain.project
-│     └─ service
-│         └─ SyncService.java
-│         └─ TrackingService.java
-
-** Almacenar las clases que se ejecutan en segundo plano
-```
 #### Estructura /java/session
 ```
 ├─ java
@@ -204,7 +193,7 @@ PENDIENTE EXPERIMENTAR
 │     └─ session
 │         └─ Preference.java
 
-** Almacenar las clases de tipo preference - PENDIENTE
+** Almacenar las clases de tipo preferens asociados al usuario
 ```
 
 
@@ -252,6 +241,55 @@ LoginActivity
 RegisterFragment
 DetailFragment
 ```
+
+### Estructura de un activity
+```java
+
+public class DetalleQuotaActivity extends AppCompatActivity {
+
+    @InjectView(R.id.image_global)
+    ImageView image_global;
+
+    Toolbar toll;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_detalle_quota);
+
+        ButterKnife.inject(this);
+
+        getToolbar();
+        DesignUtil.customStatusBarColor(getWindow(), this, R.color.smv_plomo2_3);
+    }
+
+
+    /**
+     * Void que se encarga de los detalles del toolbar
+     */
+    private void getToolbar() {
+
+        toll = (Toolbar) findViewById(R.id.toolbar);
+
+        setSupportActionBar(toll);
+        DesignUtil.toolbarColor(toll, this, R.color.smv_plomo2_3);
+        getSupportActionBar().setTitle("");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        toll.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+
+    @OnClick(R.id.image_global)
+    public void getAddProdafolio() {
+        startActivity(new Intent(this, BienvenidoActivity.class));
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+    }
+}
 
 ### Comentar una clases
 ```java
