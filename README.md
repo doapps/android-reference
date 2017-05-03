@@ -249,6 +249,9 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
     @BindView(R.id.global_image)
     ImageView global_image;
 
+    @BindView(R.id.inicio_text)
+    Texview inicio_text;
+
     Toolbar toll;
 
     private int cont;
@@ -326,7 +329,6 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
 ```
 
 ### Estructura de un layout
-
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -337,7 +339,7 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
     tools:context="com.example.leo.componet.dummy.MainActivity">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/global_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@mipmap/ic_launcher"
@@ -349,7 +351,7 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
             android:layout_marginTop="199dp" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/inicio_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
