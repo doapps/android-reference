@@ -247,7 +247,7 @@ DetailFragment
 
 public class ExampleActivity extends AppCompatActivity {
 
-    @BindView(R.id.image_global)
+    @BindView(R.id.global_image)
     ImageView global_image;
 
     Toolbar toll;
@@ -289,6 +289,57 @@ public class ExampleActivity extends AppCompatActivity {
         startActivity(new Intent(this, BienvenidoActivity.class));
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
+
+    /*********************************************************************************************/
+
+    private void getToolbar() {
+            Toolbar toll = (Toolbar) findViewById(R.id.toolbar);
+
+            DesignUtil.toolbarTransparent(toll);
+            setSupportActionBar(toll);
+            getSupportActionBar().setTitle("");
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
+        @OnClick(R.id.button_opcion1)
+        public void getOption1() {
+            isEstado(1);
+            include_opcion1.setVisibility(View.VISIBLE);
+            include_opcion2.setVisibility(View.INVISIBLE);
+        }
+
+        @OnClick(R.id.button_opcion2)
+        public void getOption2() {
+            isEstado(2);
+            include_opcion1.setVisibility(View.INVISIBLE);
+            include_opcion2.setVisibility(View.VISIBLE);
+        }
+
+        /**
+         * Metodo cambia los colores de los botones
+         *
+         * @param status :
+         *               <p>
+         *               1 -> Color de selecion en el botton 1
+         *               2 -> Color de selecion en el botton 2
+         */
+
+        public void isEstado(int status) {
+            if (status == 1) {
+                button_opcion1.setBackground(getResources().getDrawable(R.drawable.borde_in_1));
+                button_opcion1.setTextColor(getResources().getColor(R.color.smv_plomo2));
+
+                button_opcion2.setBackground(getResources().getDrawable(R.drawable.borde_of_1));
+                button_opcion2.setTextColor(getResources().getColor(R.color.smv_blanco));
+            } else {
+                button_opcion1.setBackground(getResources().getDrawable(R.drawable.borde_of_2));
+                button_opcion1.setTextColor(getResources().getColor(R.color.smv_blanco));
+
+                button_opcion2.setBackground(getResources().getDrawable(R.drawable.borde_in_2));
+                button_opcion2.setTextColor(getResources().getColor(R.color.smv_plomo2));
+            }
+        }
+
 }
 
 ### Comentar una clases
