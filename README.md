@@ -172,9 +172,9 @@ Esta es la estructura base que nos proporciona Android Studio al crear un proyec
 │  ├─ com.domain.project
 │     └─ database
 │         └─ SQLiteConnection.java
-│         └─ TableContent.java
 │         └─ table
 │              └─ EntityTable.java
+│              └─ TableContent.java
 │         └─ process
 │              └─ EntityInterface.java
 │              └─ EntityProcessor.java
@@ -183,7 +183,6 @@ Esta es la estructura base que nos proporciona Android Studio al crear un proyec
 ** ProductTable.java define el nombre de la tabla y las columnas.
 ** SQLiteConnection.java hereda de SQLiteOpenHelper y define la creación o actualización de la base de datos.
 ** TableContent.java contiene el script de las tablas, que serán llamadas desde la clase SQLiteConnection.java
-PENDIENTE EXPERIMENTAR
 ```
 
 #### Estructura /java/session
@@ -337,7 +336,6 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
     tools:context="com.example.leo.componet.dummy.MainActivity">
 
 </android.support.constraint.ConstraintLayout>
-
 
 ### Comentar una clases
 ```java
