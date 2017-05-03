@@ -247,7 +247,7 @@ DetailFragment
 
 public class DetalleQuotaActivity extends AppCompatActivity {
 
-    @InjectView(R.id.image_global)
+    @BindView(R.id.image_global)
     ImageView image_global;
 
     Toolbar toll;
@@ -257,7 +257,7 @@ public class DetalleQuotaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_quota);
 
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         getToolbar();
         DesignUtil.customStatusBarColor(getWindow(), this, R.color.smv_plomo2_3);
