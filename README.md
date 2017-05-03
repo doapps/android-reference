@@ -263,49 +263,10 @@ public class ExampleActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        getToolbar();
-        DesignUtil.customStatusBarColor(getWindow(), this, R.color.smv_plomo2_3);
     }
+}
 
-
-    /**
-     * Void que se encarga de los detalles del toolbar
-     */
-    private void getToolbar() {
-
-        toll = (Toolbar) findViewById(R.id.toolbar);
-
-        setSupportActionBar(toll);
-        DesignUtil.toolbarColor(toll, this, R.color.smv_plomo2_3);
-        getSupportActionBar().setTitle("");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        toll.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-    }
-
-    @OnClick(R.id.image_global)
-    public void getAddProdafolio() {
-        startActivity(new Intent(this, BienvenidoActivity.class));
-        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-    }
-
-    /*********************************************************************************************/
-
-    private void getToolbar() {
-            Toolbar toll = (Toolbar) findViewById(R.id.toolbar);
-
-            DesignUtil.toolbarTransparent(toll);
-            setSupportActionBar(toll);
-            getSupportActionBar().setTitle("");
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
-
-        @OnClick(R.id.button_opcion1)
+@OnClick(R.id.button_opcion1)
         public void getOption1() {
             isEstado(1);
             include_opcion1.setVisibility(View.VISIBLE);
@@ -344,25 +305,37 @@ public class ExampleActivity extends AppCompatActivity {
             }
         }
 
-        /***************************************************************************************/
-
-        private ArrayList<SectorsEntity> getList() {
-                ArrayList<SectorsEntity> lista = new ArrayList<>();
-
-                lista.add(new SectorsEntity("1", "HOLA 1"));
-                lista.add(new SectorsEntity("2", "HOLA 2"));
-                lista.add(new SectorsEntity("3", "HOLA 3"));
-                lista.add(new SectorsEntity("4", "HOLA 4"));
-                lista.add(new SectorsEntity("5", "HOLA 5"));
-                lista.add(new SectorsEntity("6", "HOLA 6"));
-                lista.add(new SectorsEntity("7", "HOLA 7"));
-                lista.add(new SectorsEntity("8", "HOLA 8"));
-
-                return lista;
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            if (!isDisplayAd) {
+                displayAds();
+                isDisplayAd = true;
             }
+            super.onBackPressed();
+        }
+    }
+
+     private ArrayList<SectorsEntity> getList() {
+                    ArrayList<SectorsEntity> lista = new ArrayList<>();
+
+                    lista.add(new SectorsEntity("1", "HOLA 1"));
+                    lista.add(new SectorsEntity("2", "HOLA 2"));
+                    lista.add(new SectorsEntity("3", "HOLA 3"));
+                    lista.add(new SectorsEntity("4", "HOLA 4"));
+                    lista.add(new SectorsEntity("5", "HOLA 5"));
+                    lista.add(new SectorsEntity("6", "HOLA 6"));
+                    lista.add(new SectorsEntity("7", "HOLA 7"));
+                    lista.add(new SectorsEntity("8", "HOLA 8"));
+
+                    return lista;
+                }
 
 
-}
+
 
 ### Comentar una clases
 ```java
