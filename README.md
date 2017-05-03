@@ -344,6 +344,24 @@ public class ExampleActivity extends AppCompatActivity {
             }
         }
 
+        /***************************************************************************************/
+
+        private ArrayList<SectorsEntity> getList() {
+                ArrayList<SectorsEntity> lista = new ArrayList<>();
+
+                lista.add(new SectorsEntity("1", "HOLA 1"));
+                lista.add(new SectorsEntity("2", "HOLA 2"));
+                lista.add(new SectorsEntity("3", "HOLA 3"));
+                lista.add(new SectorsEntity("4", "HOLA 4"));
+                lista.add(new SectorsEntity("5", "HOLA 5"));
+                lista.add(new SectorsEntity("6", "HOLA 6"));
+                lista.add(new SectorsEntity("7", "HOLA 7"));
+                lista.add(new SectorsEntity("8", "HOLA 8"));
+
+                return lista;
+            }
+
+
 }
 
 ### Comentar una clases
