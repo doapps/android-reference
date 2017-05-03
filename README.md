@@ -245,7 +245,7 @@ DetailFragment
 ### Estructura de un activity
 ```java
 
-public class ExampleActivity extends AppCompatActivity {
+public class ExampleActivity extends AppCompatActivity implements View.OnClickListener , AdapterView.OnItemClickListener{
 
     @BindView(R.id.global_image)
     ImageView global_image;
@@ -279,6 +279,18 @@ public class ExampleActivity extends AppCompatActivity {
         isEstado(2);
         include_opcion1.setVisibility(View.INVISIBLE);
         include_opcion2.setVisibility(View.VISIBLE);
+    }
+
+    /** Implements Events **/
+
+    @Override
+    public void onClick(View v) {
+
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
     }
 
     /** Logic Events **/
