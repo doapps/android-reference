@@ -252,6 +252,10 @@ public class ExampleActivity extends AppCompatActivity {
 
     Toolbar toll;
 
+    private int cont;
+    private String user;
+    private double total;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
