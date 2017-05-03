@@ -325,8 +325,9 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
 }
 ```
 
-### Estructura de un activity -> xml
+### Estructura de un layout
 
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -336,6 +337,7 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
     tools:context="com.example.leo.componet.dummy.MainActivity">
 
 </android.support.constraint.ConstraintLayout>
+```
 
 ### Comentar una clases
 ```java
