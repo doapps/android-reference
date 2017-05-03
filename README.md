@@ -335,6 +335,36 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
     android:layout_height="match_parent"
     tools:context="com.example.leo.componet.dummy.MainActivity">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="199dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="24sp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintVertical_bias="0.0" />
+
 </android.support.constraint.ConstraintLayout>
 
 ### Comentar una clases
