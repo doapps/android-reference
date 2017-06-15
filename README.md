@@ -252,6 +252,12 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
     @BindView(R.id.inicio_text)
     Texview inicioText;
 
+    @BindView(R.id.email_edit)
+     EditText emailEdit;
+
+    @BindView(R.id.enviar_button)
+    Button enviarButton;
+
     Toolbar toll;
 
     private int cont;
