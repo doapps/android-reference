@@ -419,6 +419,35 @@ values-v21
 </resources>
 ```
 
+### Definir formato de dimens.xml
+
+```xml
+<resources>
+
+    <!-- text -->
+    <dimen name="text1">1sp</dimen>
+    <dimen name="text2">2sp</dimen>
+    <dimen name="text3">3sp</dimen>
+    <dimen name="text4">4sp</dimen>
+    <dimen name="text5">5sp</dimen>
+
+    <!-- size -->
+    <dimen name="size1">1dp</dimen>
+    <dimen name="size2">2dp</dimen>
+    <dimen name="size3">3dp</dimen>
+    <dimen name="size4">4dp</dimen>
+    <dimen name="size5">5dp</dimen>
+
+    <!-- spacing -->
+    <dimen name="spacing1">1dp</dimen>
+    <dimen name="spacing2">2dp</dimen>
+    <dimen name="spacing3">3dp</dimen>
+    <dimen name="spacing4">4dp</dimen>
+    <dimen name="spacing5">5dp</dimen>
+
+</resources>
+```
+
 ### Definir cadenas estáticas por pantalla en strings.xml
 
 ```xml
