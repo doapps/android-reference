@@ -258,8 +258,6 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
     @BindView(R.id.enviar_button)
     Button enviarButton;
 
-    Toolbar toll;
-
     private int cont;
     private String user;
     private double total;
