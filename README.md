@@ -401,22 +401,21 @@ values-v21
 
 ```xml
 <resources>
-    <color name="colorPrimary">@color/black</color>
-    <color name="colorPrimaryDark">@color/green</color>
-    <color name="colorAccent">@color/white</color>
 
-    <!-- basic colors -->
-    <color name="white">#FFFFFF</color>
-    <color name="black">#000000</color>
-    <color name="green">#27D34D</color>
-    <color name="blue">#2A91BD</color>
-    <color name="orange">#FF9D2F</color>
-    <color name="red">#FF432F</color>
+    <color name="colorPrimary">@color/blue</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
 
-    <!-- opacity white -->
-    <color name="white_100">#00FFFFFF</color>
-    <color name="white_75">#BFFFFFFF</color>
-    <color name="white_50">#80FFFFFF</color>
+    <!-- blue -->
+    <color name="blue">#310004ff</color>
+    <color name="blueDark">#310004ff</color>
+    <color name="blueDark50">#310004ff</color>
+
+    <!-- red -->
+    <color name="red">#ff0000</color>
+    <color name="redDark">#711616</color>
+    <color name="red124">#7cff0000</color>
+
 </resources>
 ```
 
