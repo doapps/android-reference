@@ -247,10 +247,10 @@ DetailFragment
 public class ExampleActivity extends AppCompatActivity implements View.OnClickListener , AdapterView.OnItemClickListener{
 
     @BindView(R.id.global_image)
-    ImageView global_image;
+    ImageView globalImage;
 
     @BindView(R.id.inicio_text)
-    Texview inicio_text;
+    Texview inicioText;
 
     Toolbar toll;
 

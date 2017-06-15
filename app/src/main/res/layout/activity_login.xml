@@ -17,18 +17,20 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/editEmail"
+            android:id="@+id/email_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@mipmap/ic_email"
             android:hint="Email" />
 
         <EditText
-            android:id="@+id/edit_pass"
+            android:id="@+id/pass_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@mipmap/ic_email"
             android:hint="Password" />
+
+
     </LinearLayout>
 
 </LinearLayout>
