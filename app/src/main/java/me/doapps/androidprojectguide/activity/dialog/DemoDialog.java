@@ -16,12 +16,12 @@ import me.doapps.androidprojectguide.R;
 
 public class DemoDialog extends AlertDialog {
 
-    private String titulo;
+    private String title;
     private SelectOption selectOption;
 
-    public DemoDialog(Context context, String titulo) {
+    public DemoDialog(Context context, String title) {
         super(context);
-        this.titulo = titulo;
+        this.title = title;
         init();
     }
 

@@ -177,12 +177,12 @@ Metodo en Java:
 
 public class DemoDialog extends AlertDialog {
 
-    private String titulo;
+    private String title;
     private SelectOption selectOption;
 
-    public DemoDialog(Context context, String titulo) {
+    public DemoDialog(Context context, String title) {
         super(context);
-        this.titulo = titulo;
+        this.title = title;
         init();
     }
 
@@ -205,14 +205,14 @@ public class DemoDialog extends AlertDialog {
         Button aceptarButton = (Button) view.findViewById(R.id.accept_button);
         Button exitButton = (Button) view.findViewById(R.id.exit_button);
 
-        buttonAceptar.setOnClickListener(new View.OnClickListener() {
+        aceptarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 selectOption.accept();
             }
         });
 
-        buttonExit.setOnClickListener(new View.OnClickListener() {
+        exitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 selectOption.exit();
