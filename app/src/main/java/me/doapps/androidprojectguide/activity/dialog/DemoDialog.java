@@ -40,18 +40,18 @@ public class DemoDialog extends AlertDialog {
         LayoutInflater layoutInflater = LayoutInflater.from(getContext());
         View view = layoutInflater.inflate(R.layout.dialog_demo, null);
 
-        TextView tituloText = (TextView) view.findViewById(R.id.titulo_text);
-        Button buttonAceptar = (Button) view.findViewById(R.id.aceptar_button);
-        Button buttonExit = (Button) view.findViewById(R.id.exit_button);
+        TextView tituloText = (TextView) view.findViewById(R.id.title_text);
+        Button aceptarButton = (Button) view.findViewById(R.id.accept_button);
+        Button exitButton = (Button) view.findViewById(R.id.exit_button);
 
-        buttonAceptar.setOnClickListener(new View.OnClickListener() {
+        aceptarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                selectOption.aceptar();
+                selectOption.accept();
             }
         });
 
-        buttonExit.setOnClickListener(new View.OnClickListener() {
+        exitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 selectOption.exit();
@@ -64,7 +64,7 @@ public class DemoDialog extends AlertDialog {
 
     public interface SelectOption {
 
-        void aceptar();
+        void accept();
 
         void exit();
     }

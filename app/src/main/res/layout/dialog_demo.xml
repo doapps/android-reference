@@ -4,14 +4,14 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/titulo_text"
+        android:id="@+id/title_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textAlignment="center" />
 
     <Button
-        android:id="@+id/aceptar_button"
+        android:id="@+id/accept_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Button" />

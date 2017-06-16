@@ -27,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
 
         demoDialog.setOnSelectOption(new DemoDialog.SelectOption() {
             @Override
-            public void aceptar() {
+            public void accept() {
 
                 //Depende de lo que deseas colocar en este método
 

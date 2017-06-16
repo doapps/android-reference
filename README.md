@@ -149,14 +149,14 @@ Metodo en xml:
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/titulo_text"
+        android:id="@+id/title_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textAlignment="center" />
 
     <Button
-        android:id="@+id/aceptar_button"
+        android:id="@+id/accept_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Button" />
@@ -201,14 +201,14 @@ public class DemoDialog extends AlertDialog {
         LayoutInflater layoutInflater = LayoutInflater.from(getContext());
         View view = layoutInflater.inflate(R.layout.dialog_demo, null);
 
-        TextView tituloText = (TextView) view.findViewById(R.id.titulo_text);
-        Button buttonAceptar = (Button) view.findViewById(R.id.aceptar_button);
-        Button buttonExit = (Button) view.findViewById(R.id.exit_button);
+        TextView tituloText = (TextView) view.findViewById(R.id.title_text);
+        Button aceptarButton = (Button) view.findViewById(R.id.accept_button);
+        Button exitButton = (Button) view.findViewById(R.id.exit_button);
 
         buttonAceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                selectOption.aceptar();
+                selectOption.accept();
             }
         });
 
@@ -225,7 +225,7 @@ public class DemoDialog extends AlertDialog {
 
     public interface SelectOption {
 
-        void aceptar();
+        void accept();
 
         void exit();
     }
