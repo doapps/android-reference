@@ -195,7 +195,7 @@ Esta es la estructura base que nos proporciona Android Studio al crear un proyec
 ** Almacenar las clases de tipo preferens asociados al usuario
 ```
 
-####Modelo de un Preference :
+#### Modelo de un Preference :
 
 ```java
 
