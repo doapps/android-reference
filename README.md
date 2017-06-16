@@ -132,9 +132,108 @@ Esta es la estructura base que nos proporciona Android Studio al crear un proyec
 ├─ java
 │  ├─ com.domain.project
 │     └─ dialog
-│         └─ ProgressDialog.java
+│         └─ DemoDialog.java
 
 ** Almacenar las clases controladoras de diálogos customizados.
+```
+
+#### Ejemplo de implementación de dialogo personalizado :
+
+Metodo en xml:
+
+```xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titulo_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/aceptar_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/exit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+</LinearLayout>
+
+```
+
+Metodo en Java:
+
+```java
+
+public class DemoDialog extends AlertDialog {
+
+    private String titulo;
+    private SelectOption selectOption;
+
+    public DemoDialog(Context context, String titulo) {
+        super(context);
+        this.titulo = titulo;
+        init();
+    }
+
+    protected DemoDialog(Context context, boolean cancelable, OnCancelListener cancelListener) {
+        super(context, cancelable, cancelListener);
+        init();
+    }
+
+    protected DemoDialog(Context context, @StyleRes int themeResId) {
+        super(context, themeResId);
+        init();
+    }
+
+
+    private void init() {
+        LayoutInflater layoutInflater = LayoutInflater.from(getContext());
+        View view = layoutInflater.inflate(R.layout.dialog_demo, null);
+
+        TextView tituloText = (TextView) view.findViewById(R.id.titulo_text);
+        Button buttonAceptar = (Button) view.findViewById(R.id.aceptar_button);
+        Button buttonExit = (Button) view.findViewById(R.id.exit_button);
+
+        buttonAceptar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectOption.aceptar();
+            }
+        });
+
+        buttonExit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectOption.exit();
+            }
+        });
+
+        setView(view);
+        setCancelable(false);
+    }
+
+    public interface SelectOption {
+
+        void aceptar();
+
+        void exit();
+    }
+
+    public void setOnSelectOption(SelectOption selectOption) {
+        this.selectOption = selectOption;
+    }
+
 ```
 
 #### Estructura /java/listener
