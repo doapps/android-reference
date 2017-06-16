@@ -17,8 +17,6 @@ public class Preference {
     private static final String EMAIL = "email";
     private static final String LOGIN = "login";
 
-    private boolean logout;
-
     public static Preference getIntance(Context context) {
         if (preference == null) {
             preference = new Preference(context);
