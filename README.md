@@ -467,6 +467,15 @@ values-v21
 </resources>
 ```
 
+#### Nomenclatura de un includ ”
+
+Al crear un includ se nombrará de la siguiente forma
+
+Cuando la vista contenga un Toolbar - > app_bar_main
+Cuando la vista sea el contenedor de los fragments- > content_menu
+Cuando la vista forma parte de la ventana -> frames_map , fragmes_formulario
+
+
 #### Uso de las carpetas “mipmap“ y “drawable”
 Android Studio nos provee por defecto de ambas carpetas para almacenar los recursos gráficos del proyecto.
 
