@@ -195,6 +195,52 @@ Esta es la estructura base que nos proporciona Android Studio al crear un proyec
 ** Almacenar las clases de tipo preferens asociados al usuario
 ```
 
+####Modelo de un Preference :
+
+```java
+
+public class Preference {
+
+    private static final String PREFERENCE_NAME = "demo";
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
+    private static Preference preference;
+
+    private static final String EMAIL = "email";
+    private static final String LOGIN = "login";
+
+    private boolean logout;
+
+    public static Preference getIntance(Context context) {
+        if (preference == null) {
+            preference = new Preference(context);
+        }
+        return preference;
+    }
+
+    public Preference(Context context) {
+        sharedPreferences = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+    }
+
+    public void setEmail(String email) {
+        editor.putString(EMAIL, email).commit();
+    }
+
+    public String getEmail() {
+        return sharedPreferences.getString(EMAIL, null);
+    }
+
+    public void setLogin(boolean login) {
+        editor.putBoolean(LOGIN, login).commit();
+    }
+
+    public boolean isLogin() {
+        return sharedPreferences.getBoolean(LOGIN, false);
+    }
+}
+
+```
 
 #### Estructura /java/util
 ```

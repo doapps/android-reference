@@ -1,4 +1,4 @@
-package me.doapps.androidprojectguide;
+package me.doapps.androidprojectguide.activity;
 
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
