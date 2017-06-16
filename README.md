@@ -467,7 +467,7 @@ values-v21
 </resources>
 ```
 
-#### Nomenclatura de un includ
+#### Nomenclatura de un include
 
 Al crear un includ se nombrará de la siguiente forma
 
@@ -475,7 +475,7 @@ Cuando la vista contenga un Toolbar - > `app_bar_main.xml`
 
 Cuando la vista sea el contenedor de los fragments- > `content_menu.xml`
 
-Cuando la vista forma parte de la ventana -> `frames_map.xml , fragmes_formulario.xml`
+Cuando la vista forma parte de la ventana -> `frames_map.xml , frages_form.xml`
 
 
 #### Uso de las carpetas “mipmap“ y “drawable”
