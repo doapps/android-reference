@@ -40,10 +40,11 @@ public class DemoDialog extends AlertDialog {
         LayoutInflater layoutInflater = LayoutInflater.from(getContext());
         View view = layoutInflater.inflate(R.layout.dialog_demo, null);
 
-        TextView tituloText = (TextView) view.findViewById(R.id.title_text);
+        TextView titleText = (TextView) view.findViewById(R.id.title_text);
         Button aceptarButton = (Button) view.findViewById(R.id.accept_button);
         Button exitButton = (Button) view.findViewById(R.id.exit_button);
 
+        titleText.setText(title);
         aceptarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
