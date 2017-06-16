@@ -456,14 +456,14 @@ values-v21
 
 ```xml
 <resources>
-    <string name="app_name">DoApps</string>
-    <!-- activity_menu -->
-    <string name="menu_home">Inicio</string>
-    <string name="menu_contact">Contactos</string>
-    <string name="menu_profile">Perfil</string>
-    <!-- fragment_profile -->
-    <string name="label_lastname">Apellido</string>
-    <string name="label_name">Nombre</string>
+
+    <!-- activity login -->
+    <string name="login_title">Titulo del Activity</string>
+    <string name="login_text_descripcion">Descripcion</string>
+
+    <!-- Error -->
+    <string name="error_usuario">Error el usuario no esta registrado</string>
+
 </resources>
 ```
 

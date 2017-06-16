@@ -6,4 +6,14 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_menu">MenuActivity</string>
+
+
+    <!-- activity login -->
+    <string name="login_title">Titulo del Activity</string>
+    <string name="login_text_descripcion">Descripcion</string>
+
+    <!-- Error -->
+    <string name="error_usuario">Error el usuario no esta registrado</string>
+
+
 </resources>
