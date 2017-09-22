@@ -457,6 +457,8 @@ public class Setting {
 │     └─ dialog
 │         └─ DemoDialog.java
 
+```
+
 ** Almacenar las clases controladoras de diálogos customizados.
 
 ### Ejemplo de implementación de dialogo personalizado :
@@ -465,7 +467,6 @@ Metodo en xml:
 
 ```xml
 
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -577,7 +578,7 @@ public class DemoDialog extends AlertDialog {
 ** fcm las clases firebase
 ** background otras clases en segundo plano.
 ```
-###Estructura de un ResApi
+### Estructura de un ResApi
 
 ```java
 public interface RestApi {
@@ -599,7 +600,7 @@ public interface RestApi {
             .addConverterFactory(GsonConverterFactory.create()).build();
 ```
 
-###Estructura de un MessagingService
+### Estructura de un MessagingService
 
 ```java
 
@@ -642,7 +643,7 @@ public class MessagingService extends FirebaseMessagingService {
 
 ```
 
-###Estructura de un Asynctask
+### Estructura de un Asynctask
 
 ```java
 public class ExampleAsynctask extends AsyncTask<String, Integer, Boolean> {
@@ -697,8 +698,9 @@ public class ExampleAsynctask extends AsyncTask<String, Integer, Boolean> {
 │              └─ EntityProcessor.java
 │         └─ listener
 │               └─ EntityInterface.java
+```
 
-###Estructura de un SQLiteConnection
+### Estructura de un SQLiteConnection
 
 ```java
  public SQLiteConnection(Context context) {
@@ -718,7 +720,7 @@ public class ExampleAsynctask extends AsyncTask<String, Integer, Boolean> {
     }
 ```
 
-###Estructura de un TableContent
+### Estructura de un TableContent
 
 ```java
 public class TableContent {
@@ -737,7 +739,7 @@ public class TableContent {
 
 ```
 
-###Estructura de un EntityTable
+### Estructura de un EntityTable
 
 ```java
 public class EntityTable {
@@ -753,7 +755,7 @@ public class EntityTable {
 }
 ```
 
-###Estructura de un EntityProcessor
+### Estructura de un EntityProcessor
 
 ```java
 public class EntityProcess implements EntityInterface<Person> {
@@ -804,7 +806,7 @@ public class EntityProcess implements EntityInterface<Person> {
 
 ```
 
-###Estructura de un EntityInterface
+### Estructura de un EntityInterface
 
 ```java
 public interface EntityInterface<P> {
@@ -814,11 +816,9 @@ public interface EntityInterface<P> {
 }
 ```
 
-
 ** ProductTable.java define el nombre de la tabla y las columnas.
 ** SQLiteConnection.java hereda de SQLiteOpenHelper y define la creación o actualización de la base de datos.
 ** TableContent.java contiene el script de las tablas, que serán llamadas desde la clase SQLiteConnection.java
-```
 
 #### Estructura /java/session
 ```
