@@ -93,7 +93,7 @@ Esta es la estructura base que nos proporciona Android Studio al crear un proyec
 │     └─ applicaction
 │         └─ AnalyticsApplication.java
 
-** En esta carpeta se aplicara google analytic para el seguimienro de ventanas en tiempo real
+** En esta carpeta se aplicara google analytic para el seguimiento de ventanas en tiempo real
 ```
 Clase AnalyticsApplication
 
@@ -271,16 +271,6 @@ public class DemoDialog extends AlertDialog {
         this.selectOption = selectOption;
     }
 
-```
-
-#### Estructura /java/listener
-```
-├─ java
-│  ├─ com.domain.project
-│     └─ listener
-│         └─ NotificationListener.java
-
-** Almacenar las clases de tipo interface
 ```
 
 #### Estructura /java/networking
@@ -652,13 +642,26 @@ values-v21
 #### Nomenclatura de un include
 
 Al crear un includ se nombrará de la siguiente forma
+Cuando la vista contenga un Toolbar - > `app_bar_main.xml` , `app_bar_contact.xml`
 
-Cuando la vista contenga un Toolbar - > `app_bar_main.xml`
+```xml
+  <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+```
+
+Cuando la vista forma parte de la ventana -> `custom_contact.xml , custom_about.xml`
+
+```xml
+  <include
+        android:id="@+id/custom_contact"
+        layout="@layout/custom_contact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+```
 
 Cuando la vista sea el contenedor de los fragments- > `content_menu.xml`
-
-Cuando la vista forma parte de la ventana -> `frames_map.xml , frages_form.xml`
-
 
 #### Uso de las carpetas “mipmap“ y “drawable”
 Android Studio nos provee por defecto de ambas carpetas para almacenar los recursos gráficos del proyecto.
