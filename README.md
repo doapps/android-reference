@@ -91,10 +91,44 @@ Esta es la estructura base que nos proporciona Android Studio al crear un proyec
 ├─ java
 │  ├─ com.domain.project
 │     └─ applicaction
-│         └─ MainApplication.java
+│         └─ AnalyticsApplication.java
 
-** En caso amerite se crearán subcarpetas a discreción del desarrollador para ordenar las clases.
+** En esta carpeta se aplicara google analytic para el seguimienro de ventanas en tiempo real
+
+** Clase AnalyticsApplication
+
+``` java
+public class AnalyticsApplication extends Application {
+
+    public static Tracker mTracker;
+
+    synchronized public Tracker getDefaultTracker() {
+        if (mTracker == null) {
+            GoogleAnalytics analytics = GoogleAnalytics.getInstance(this);
+            // To enable debug logging use: adb shell setprop log.tag.GAv4 DEBUG
+            mTracker = analytics.newTracker(R.xml.global_tracker);
+        }
+        return mTracker;
+    }
+
+    public static void sendScreenTrack(Context context, String screenName) {
+        if (mTracker == null) {
+            GoogleAnalytics analytics = GoogleAnalytics.getInstance(context);
+            mTracker = analytics.newTracker(R.xml.global_tracker);
+        }
+        mTracker.setScreenName(screenName);
+        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
+    }
+}
+
 ```
+
+** Se implementa en el onResume
+
+``` java
+AnalyticsApplication.sendScreenTrack(this, ConfigurationUtil.ACTIVITY_INTRO);
+```
+
 
 #### Estructura /java/model
 ```
