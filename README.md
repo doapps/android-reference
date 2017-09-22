@@ -97,7 +97,8 @@ Esta es la estructura base que nos proporciona Android Studio al crear un proyec
 
 ** Clase AnalyticsApplication
 
-``` java
+```java
+
 public class AnalyticsApplication extends Application {
 
     public static Tracker mTracker;
@@ -125,8 +126,10 @@ public class AnalyticsApplication extends Application {
 
 ** Se implementa en el onResume
 
-``` java
+```java
+
 AnalyticsApplication.sendScreenTrack(this, ConfigurationUtil.ACTIVITY_INTRO);
+
 ```
 
 
