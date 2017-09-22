@@ -94,7 +94,7 @@ Esta es la estructura base que nos proporciona Android Studio al crear un proyec
 │         └─ AnalyticsApplication.java
 
 ** En esta carpeta se aplicara google analytic para el seguimienro de ventanas en tiempo real
-
+```
 Clase AnalyticsApplication
 
 ```java
