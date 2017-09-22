@@ -56,7 +56,6 @@ Esta es la estructura base que nos proporciona Android Studio al crear un proyec
 │     ├─ adapter
 │     ├─ config
 │     ├─ dialog
-│     ├─ listener
 │     ├─ networking
 │     ├─ database
 │     ├─ session
@@ -111,7 +110,8 @@ Esta es la estructura base que nos proporciona Android Studio al crear un proyec
 ├─ java
 │  ├─ com.domain.project
 │     └─ adapter
-│         └─ ProductAdapter.java
+│         └─ ProductListAdapter.java
+│         └─ ProductGridAdapter.java
 
 ** Importante considerar que el nombre del adapter tiene que ser equivalente al nombre del modelo
 ```
@@ -254,6 +254,7 @@ public class DemoDialog extends AlertDialog {
 │     └─ networking
 │         └─ connection
 │             └─ RestApi.java
+│             └─ GoogleApi.java
 │         └─ fcm
 │             └─ InstanceService.java
 │             └─ MessagingService.java
@@ -272,12 +273,13 @@ public class DemoDialog extends AlertDialog {
 │  ├─ com.domain.project
 │     └─ database
 │         └─ SQLiteConnection.java
+│         └─ TableContent.java
 │         └─ table
 │              └─ EntityTable.java
-│              └─ TableContent.java
 │         └─ process
-│              └─ EntityInterface.java
 │              └─ EntityProcessor.java
+│         └─ listener
+│               └─ EntityInterface.java
 
 
 ** ProductTable.java define el nombre de la tabla y las columnas.
@@ -552,19 +554,17 @@ values-v21
 ```xml
 <resources>
 
-    <color name="colorPrimary">@color/blue</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+        <color name="colorPrimary">@color/red</color>
+        <color name="colorPrimaryDark">@color/blue</color>
+        <color name="colorAccent">@color/blue50</color>
 
-    <!-- blue -->
-    <color name="blue">#310004ff</color>
-    <color name="blueDark">#310004ff</color>
-    <color name="blueDark50">#310004ff</color>
+        <!-- blue -->
+        <color name="blue">#310004ff</color>
+        <color name="blue50">#310004ff</color>
 
-    <!-- red -->
-    <color name="red">#ff0000</color>
-    <color name="redDark">#711616</color>
-    <color name="red124">#7cff0000</color>
+        <!-- red -->
+        <color name="red">#ff0000</color>
+        <color name="red50">#711616</color>
 
 </resources>
 ```
