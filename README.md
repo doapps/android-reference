@@ -51,7 +51,6 @@ Esta es la estructura base que nos proporciona Android Studio al crear un proyec
 │  ├─ com.domain.project
 │     ├─ activity
 │     ├─ fragment
-│     ├─ application
 │     ├─ model
 │     ├─ adapter
 │     ├─ config
@@ -224,52 +223,6 @@ public class ExampleFragment extends Fragment {
 
 ```
 
-### Estructura /java/application
-```
-├─ java
-│  ├─ com.domain.project
-│     └─ applicaction
-│         └─ AnalyticsApplication.java
-
-** En esta carpeta se aplicara google analytic para el seguimiento de ventanas en tiempo real
-```
-
- #### Estructura de la clase AnalyticsApplication
-
-```java
-
-public class AnalyticsApplication extends Application {
-
-    public static Tracker mTracker;
-
-    synchronized public Tracker getDefaultTracker() {
-        if (mTracker == null) {
-            GoogleAnalytics analytics = GoogleAnalytics.getInstance(this);
-            // To enable debug logging use: adb shell setprop log.tag.GAv4 DEBUG
-            mTracker = analytics.newTracker(R.xml.global_tracker);
-        }
-        return mTracker;
-    }
-
-    public static void sendScreenTrack(Context context, String screenName) {
-        if (mTracker == null) {
-            GoogleAnalytics analytics = GoogleAnalytics.getInstance(context);
-            mTracker = analytics.newTracker(R.xml.global_tracker);
-        }
-        mTracker.setScreenName(screenName);
-        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
-    }
-}
-
-```
-Se implementa en el onResume
-
-```java
-
-AnalyticsApplication.sendScreenTrack(this, ConfigurationUtil.ACTIVITY_INTRO);
-
-```
-
 ### Estructura /java/model
 ```
 ├─ java
@@ -319,7 +272,9 @@ AnalyticsApplication.sendScreenTrack(this, ConfigurationUtil.ACTIVITY_INTRO);
 │         └─ ProductListAdapter.java
 │         └─ ProductGridAdapter.java
 
-** Importante considerar que el nombre del adapter tiene que ser equivalente al nombre del modelo
+** En el caso que el model utilize dos adapter se especificara el adapter con : nombre + caso de listado + adpater
+** Ejemplo :
+** ProductCountAdapter,ProductGridAdapter,ProductListAdapter
 ```
 
 ### Estructura de un Adapter
@@ -436,6 +391,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductA
 
 ```java
 public class Setting {
+
     public static String NAME_TEXT = "name";
     public static String DISTRICT_TEXT = "district";
     public static String LOCATION_TEXT = "location";
@@ -447,6 +403,10 @@ public class Setting {
     public static String CONTINUE = "Continuar";
     public static String QUESTIONNAIRE = "Cuestionario";
     public static String POSITION = "posicion";
+
+    // Cuando Se usa los permisos de android
+     REQUEST_LOCATION = 200
+     REQUEST_IMAGE_GET = 100
 }
 ```
 
@@ -459,7 +419,7 @@ public class Setting {
 
 ```
 
-** Almacenar las clases controladoras de diálogos customizados.
+** Se reutilizara los dialogs siempre y cuando la estructura sea la misma.
 
 ### Ejemplo de implementación de dialogo personalizado :
 
@@ -575,6 +535,10 @@ public class DemoDialog extends AlertDialog {
 │             └─ ExampleAsynctask.java
 
 ** connection Almacenar las clases que involucran a Retrofit
+** El restapi se refiere a los servicios que ofrecemos
+** En caso fuera un cliente es el nombre del proyecto con la palabra api
+** Por ejemplo :
+** Ozonoapi
 ** fcm las clases firebase
 ** background otras clases en segundo plano.
 ```
