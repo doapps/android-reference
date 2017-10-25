@@ -56,6 +56,7 @@ Esta es la estructura base que nos proporciona Android Studio al crear un proyec
 │     ├─ config
 │     ├─ dialog
 │     ├─ networking
+│     ├─ background
 │     ├─ database
 │     ├─ session
 │     ├─ util
@@ -93,7 +94,7 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
     Button enviarButton;
 
     private int cont;
-    private String user;
+    private String userStatus;
     private double total;
 
     @Override
@@ -524,15 +525,15 @@ public class DemoDialog extends AlertDialog {
 ```
 ├─ java
 │  ├─ com.domain.project
-│     └─ networking
-│         └─ connection
-│             └─ RestApi.java
-│             └─ GoogleApi.java
-│         └─ fcm
-│             └─ MessagingService.java
-│         └─ background
-│             └─ TrackerService.java
-│             └─ ExampleAsynctask.java
+│     ├─ networking
+│     │    └─ connection
+│     │        └─ RestApi.java
+│     │        └─ GoogleApi.java
+│     │    └─ fcm
+│     │        └─ MessagingService.java
+│     ├─background
+│          └─ TrackerService.java
+│          └─ ExampleAsynctask.java
 
 ** connection Almacenar las clases que involucran a Retrofit
 ** El restapi se refiere a los servicios que ofrecemos
@@ -1052,16 +1053,19 @@ values-v21
 <resources>
 
         <color name="colorPrimary">@color/red</color>
-        <color name="colorPrimaryDark">@color/blue</color>
-        <color name="colorAccent">@color/blue50</color>
+        <color name="colorPrimaryDark">@color/red300</color>
+        <color name="colorAccent">@color/blue</color>
 
-        <!-- blue -->
+        <color name="red">#ff0000</color>
+        <color name="red100">#560033</color>
+        <color name="red300">#560033</color>
+        <color name="red700">#560033</color>
+        <color name="redOpacity40">#711616</color>
+        <color name="redOpacity60">#711616</color>
+
         <color name="blue">#310004ff</color>
         <color name="blue50">#310004ff</color>
-
-        <!-- red -->
-        <color name="red">#ff0000</color>
-        <color name="red50">#711616</color>
+        <color name="blueOpacity50">#310004ff</color>
 
 </resources>
 ```
@@ -1071,21 +1075,18 @@ values-v21
 ```xml
 <resources>
 
-    <!-- text -->
     <dimen name="text1">1sp</dimen>
     <dimen name="text2">2sp</dimen>
     <dimen name="text3">3sp</dimen>
     <dimen name="text4">4sp</dimen>
     <dimen name="text5">5sp</dimen>
 
-    <!-- size -->
     <dimen name="size1">1dp</dimen>
     <dimen name="size2">2dp</dimen>
     <dimen name="size3">3dp</dimen>
     <dimen name="size4">4dp</dimen>
     <dimen name="size5">5dp</dimen>
 
-    <!-- spacing -->
     <dimen name="spacing1">1dp</dimen>
     <dimen name="spacing2">2dp</dimen>
     <dimen name="spacing3">3dp</dimen>
