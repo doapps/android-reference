@@ -106,7 +106,6 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
 
     }
 
-    /** View Events **/
     @OnClick(R.id.button_opcion1)
     public void getOption1() {
         isEstado(1);
@@ -121,7 +120,6 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
         include_opcion2.setVisibility(View.VISIBLE);
     }
 
-    /** Implements Events **/
 
     @Override
     public void onClick(View v) {
@@ -133,7 +131,6 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
 
     }
 
-    /** Logic Events **/
     public void isEstado(int status) {
         if (status == 1) {
             button_opcion1.setBackground(getResources().getDrawable(R.drawable.borde_in_1));
@@ -148,7 +145,6 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
         }
     }
 
-    /** Lifecycle Events **/
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
